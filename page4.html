@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AssignmentTool</title>
+<style> 
+    *{
+        background-color: pink;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    html, body {
+        height: 100%;
+    }
+    .header{
+        background-color: rgb(255, 150, 167);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        padding: 1%;
+        height: auto;
+        border-bottom: 2px solid rgb(255, 113, 137);
+    }
+    p, h1{
+        background-color: rgb(255, 150, 167);
+    }
+    .header h1{
+        margin-left: 2%;
+    }
+    .userinfo {
+        text-align: right;
+        margin-right: 2%;
+    }
+    .logout {
+        display: flex; 
+        align-items: center; 
+        gap: 5px; 
+        cursor: pointer; 
+    }
+    .logout img{
+        height: 16px;
+        width: 16px;
+        background-color: rgb(255, 150, 167);
+    }
+    .logout:hover {color: blue;}
+    .main {
+        display: grid;
+        float: right;
+        height: 89.3%;
+        min-width: 13%;
+    }
+    .aside{
+        background-color: rgb(255, 150, 167);
+        padding: 6%;
+        padding-top: 20%;
+        border-left: 2px solid rgb(255, 113, 137);
+    }
+    .course-item a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        background-color: rgb(255, 150, 167);
+    }
+    .course-item a:hover, .current-item a:hover{
+        color: blue;
+    }
+    .container{
+      margin-left: 7%;
+      margin-top: 5%;
+      margin-right: 20%;
+      border: 1px solid rgb(255, 113, 137); 
+        
+    }
+    .row{
+        padding: 2%;
+        align-content: space-between;
+        display: flex;
+        gap: 84%;
+        background-color: rgb(255, 150, 167);
+        border: 1px solid rgb(255, 113, 137); 
+    }
+    h4{
+        padding-top: 4%;
+        padding-left: 6%;
+    }
+    .current-item, .current-item a{
+        background-color: rgb(255, 150, 167);
+        text-decoration: none;
+        color: black;
+        
+    }
+    .download{
+        margin-left: 5%;
+        margin-top: 3%;
+        padding: 2%;
+        background-color: rgb(255, 150, 167);
+        width: 160px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(255, 113, 137); 
+        border-radius: 10px; 
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+    .download:hover, .download:hover a{
+        background-color: rgb(255, 113, 137); 
+        color: black;
+    }
+    a{
+        background-color: rgb(255, 150, 167) ;
+        text-decoration: none;
+        color: black;
+    }
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Student E: Assignment 6</h1> 
+        <div class="userinfo">
+            <p>Max Mustermann</p>
+            <p class="logout">
+                <img src="logout.png" alt="log out icon" class="logout-icon">
+                Log out
+            </p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="aside">
+            <p>Other assignments:</p>
+            <ul class="courses">
+                <p class="course-item"><a href="#SA">Student A (10/10)</a></p>
+                <p class="course-item"><a href="#SB">Student B (8/10)</a></p>
+                <p class="course-item"><a href="#A3">Student C (9/10)</a></p>
+                <p class="course-item"><a href="#A4">Student D (7/10)</a></p>
+                <h3 class="current-item"><a href="page4.html"> Student E (-/10)</a></h3>
+                <p class="course-item"><a href="#A5">Student F (-/10)</a></p>
+            </ul>
+        </div>
+    </div>
+    <div class="download">
+        <a href="#DA">
+        Download Assignment
+        </a>
+    </div>
+    <div class="download">
+        <a href="UF">
+        Upload Feedback
+        </a>
+    </div>
+
+    <h4>Punkte: -/10</h4>
+</body>
+</html>
