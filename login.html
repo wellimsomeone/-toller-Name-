@@ -47,6 +47,7 @@
     .course p{
         margin-bottom: 1%;
         text-align: left;
+        margin-top: 1.5%;
     }
 
     .course input{
@@ -54,6 +55,13 @@
         border-radius: 5px; 
         height: 2;
         font-size: larger;
+    }
+    .button:hover{
+        background-color: rgb(255, 113, 137);
+    }
+    .error-message{
+        background-color: rgb(255, 150, 167);
+        margin-left: 3%;
     }
    
 </style>
@@ -63,14 +71,26 @@
 
     
     <div class="course">
-        <p style="font-size:5vw;">WebSSO Login</p>
-        <p style="font-size: 3vw;">Nutzer:</p>
-        <input type="text">
-        <p style="font-size: 3vw;">Passwort:</p>
-        <input type="password">
-        <input type="button" value="Login" onclick=" location.href='page1.html' ;" style="margin-left: 80%; font-size: 3em">
-        
-        </div>
+        <h1 style="font-size: 3vw;">WebSSO Login</h1>
+        <p style="font-size: 2vw;">LUH-ID:</p>
+        <input type="text" id="username" style="height: 30px;" placeholder=" Enter your Username" required>
+        <p style="font-size: 2vw;">WebSSO Password:</p>
+        <input type="password" id="password" style="height: 30px;" placeholder=" Enter your Password" required>
+        <input type="button" class="button" value="Login" onclick="check_login()" style="margin-left: 82.3%; font-size: 2em; margin-top: 2%; width: 200px;"> 
+        <h3 id="error-message" class="error-message"></h3>
     </div>
+    <script>
+        function check_login(){
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if(username == "example" && password == "example") 
+                window.location.href = "page1.html";
+            else{
+                const error = document.getElementById("error-message");
+                error.textContent = "Error: Wrong username or password.";
+            }
+        }
+    </script>
 </body>
 </html>
