@@ -84,12 +84,43 @@
         background-color: rgb(255, 150, 167);
         height: 60px;
         width: 60px;
-        margin-left: 90%;
+        
     }
     .course p{
         margin-bottom: 6%;
         text-align: left;
     }
+    .tooltip {
+        background-color: rgb(255, 150, 167);
+        position: absolute; 
+        display: inline-flex; 
+        cursor: pointer; 
+        margin-left: 39%;
+        margin-top: 5%;
+    }
+    
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: pink;
+    border: 1px solid black; 
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1; 
+    bottom: 120%; 
+    left: 35%;
+    transform: translateX(-50%);
+    white-space: nowrap; 
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}
    
 </style>
 </head>
@@ -110,8 +141,11 @@
             <a href="page7.html">
             <p class="assignments-to-check">Course A</p>
             Total points: 60/70
-            <img src="attention.png" alt="attention picture" class="attention-icon">
             </a>
+            <div class="tooltip">
+                <img src="attention.png" alt="attention picture" class="attention-icon">
+                <span class="tooltip-text">New Feedback!</span>
+            </div>
         </div>
         <div class="course">
             <p class="assignments-to-check">Course B</p>
