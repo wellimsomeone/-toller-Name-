@@ -86,6 +86,8 @@
 
             if(username == "example" && password == "example") 
                 window.location.href = "page1.html";
+            else if(username == "student" && password == "student")
+            window.location.href = "page6.html";
             else{
                 const error = document.getElementById("error-message");
                 error.textContent = "Error: Wrong username or password.";
