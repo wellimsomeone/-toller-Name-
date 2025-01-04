@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AssignmentTool</title>
+<style> 
+    *{
+        background-color: pink;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    html, body {
+        height: 100%;
+    }
+    .header{
+        background-color: rgb(255, 150, 167);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        padding: 1%;
+        height: auto;
+        border-bottom: 2px solid rgb(255, 113, 137);
+    }
+    p, h1{
+        background-color: rgb(255, 150, 167);
+    }
+    .header h1{
+        margin-left: 2%;
+    }
+    .download{
+        margin-left: 39%;
+        margin-top: 1%;
+        background-color: rgb(255, 150, 167);
+        width: 140px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(255, 113, 137); 
+        border-radius: 10px; 
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        margin-bottom: 5%;
+      justify-content: center;
+    }
+    .download:hover, .download:hover a, .feedback:hover, .feedback:hover a {
+        background-color: rgb(255, 113, 137); 
+        color: black;
+    }
+
+    a:visited {
+        color: black;
+        
+    }
+    a{
+        background-color: rgb(255, 150, 167) ;
+        text-decoration: none;
+        color: black;
+    }
+    .box{
+        margin-top: 2%;
+        display: flex;
+        margin-left: 15%;  
+    }
+    
+   h4 {
+    text-align: center;
+   }
+   .drag_drop{
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 1%;
+        margin-top: 2%;
+        height: 60%;
+        border: 2px dashed #aaa;
+        border-radius: 10px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: background-color 0.3s, border-color 0.3s;
+   }
+   .drag_drop.dragover {
+    background-color: #e0f7ff;
+   }
+
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Abgabe: Assignment 3</h1> 
+    </div>
+
+    <div class="drag_drop" id="drop">
+        Drag & Drop
+    </div>
+
+    <h4>Drag the zip-file into the area</h4>
+    <div class="box">
+        <label for="folder"></label>
+        <input type="file" id="folder" multiple>
+
+    <div class="download">
+        <a href="page8.part2.html">
+        Save
+        </a>
+    </div>
+    </div>
+    <script>
+        const drop = document.getElementById('drop');
+        drop.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            drop.classList.add('dragover');
+        });
+        drop.addEventListener('dragleave',() => {
+            drop.classList.remove('dragover');
+        });
+        drop.addEventListener('drop',(event) => {
+            event.preventDefault();
+            drop.classList.remove('dragover');
+            const files = event.dataTransfer.files;
+            handleFiles(files);
+        });
+
+        const folder = document.getElementById('folder');
+        folder.addEventListener('change', () => {
+            const files = folder.files;
+            handleFiles(files);
+        });
+        function handleFiles(files) {
+            const fileNames = Array.from(files).map(file => file.name).join(', ');
+            
+        }
+    </script>
+    
+    
+</body>
+</html>

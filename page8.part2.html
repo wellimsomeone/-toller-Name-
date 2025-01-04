@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AssignmentTool</title>
+<style> 
+    *{
+        background-color: pink;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    html, body {
+        height: 100%;
+    }
+    .header{
+        background-color: rgb(255, 150, 167);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        padding: 1%;
+        height: auto;
+        border-bottom: 2px solid rgb(255, 113, 137);
+    }
+    p, h1{
+        background-color: rgb(255, 150, 167);
+    }
+    .header h1{
+        margin-left: 2%;
+    }
+    .userinfo {
+        text-align: right;
+        margin-right: 2%;
+    }
+    .logout {
+        display: flex; 
+        align-items: center; 
+        gap: 5px; 
+        cursor: pointer; 
+    }
+    .logout img{
+        height: 16px;
+        width: 16px;
+        background-color: rgb(255, 150, 167);
+    }
+    .logout:hover {color: blue;}
+    .main {
+        display: grid;
+        float: right;
+        height: 100%;
+        min-width: 13%;
+    }
+    .aside{
+        background-color: rgb(255, 150, 167);
+        padding: 6%;
+        padding-top: 20%;
+        border-left: 2px solid rgb(255, 113, 137);
+    }
+    .course-item a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        background-color: rgb(255, 150, 167);
+    }
+    .course-item a:hover, .current-item a:hover{
+        color: blue;
+    }
+    .container{
+      margin-left: 7%;
+      margin-top: 5%;
+      margin-right: 20%;
+      border: 1px solid rgb(255, 113, 137); 
+        
+    }
+    .row{
+        padding: 2%;
+        align-content: space-between;
+        display: flex;
+        gap: 84%;
+        background-color: rgb(255, 150, 167);
+        border: 1px solid rgb(255, 113, 137); 
+    }
+    h4{
+        padding-top: 3%;
+        padding-left: 6%;
+        padding-bottom: 1%;
+    }
+    .current-item, .current-item a{
+        background-color: rgb(255, 150, 167);
+        text-decoration: none;
+        color: black;
+        
+    }
+    .download{
+        margin-left: 5%;
+        margin-top: 1%;
+        padding: 2%;
+        background-color: rgb(255, 150, 167);
+        width: 160px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(255, 113, 137); 
+        border-radius: 10px; 
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+    .feedback{
+        margin-left: 4.5%;
+        margin-top: 1%;
+        padding: 2%;
+        background-color: rgb(255, 150, 167);
+        width: 160px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(255, 113, 137); 
+        border-radius: 10px; 
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+    .download:hover, .download:hover a, .feedback:hover, .feedback:hover a {
+        background-color: rgb(255, 113, 137); 
+        color: black;
+    }
+    a{
+        background-color: rgb(255, 150, 167) ;
+        text-decoration: none;
+        color: black;
+    }
+    .box{
+        display: flex;
+        align-content: space-between;
+    }
+    .scroll{
+        width: 600px; 
+        height: 300px; 
+        border: 1px solid rgb(255, 113, 137); 
+        padding: 10px; 
+        overflow-y: scroll;
+        overflow-x: hidden; 
+        background-color: rgb(255, 150, 167); 
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        margin: 3%;
+    }
+    .scroll::-webkit-scrollbar {
+        width: 8px; 
+    }
+    .scroll::-webkit-scrollbar-thumb {
+        background-color: rgb(255, 113, 137); 
+        border-radius: 4px; 
+    }
+    .scroll::-webkit-scrollbar-track {
+        background-color: rgb(255, 75, 105); 
+    }
+    .scroll h2{
+        background-color: rgb(255, 150, 167); 
+    }
+
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Course A: Assignment 3</h1> 
+        <div class="userinfo">
+            <p>Jan Mustermann</p>
+            <p class="logout">
+                <img src="logout.png" alt="log out icon" class="logout-icon">
+                <a href="login.html"> Log out</a>
+            </p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="aside">
+            <p class="course-item"><a href="page7.html">Other Assignments: </a></p>
+            <ul class="courses">
+                <p class="course-item"><a href="#SA">Assignment 1</a></p>
+                <p class="course-item"><a href="#SB">Assignment 2</a></p>
+                <h3 class="current-item"><a href="page8.html">Assignment 3</a></h3>
+                <p class="course-item"><a href="#A3">Assignment 4</a></p>
+                <p class="course-item"><a href="#A4">Assignment 5</a></p>
+                <p class="course-item"><a href="page9.html">Assignment 6</a></p>
+            </ul>
+        </div>
+    </div>
+    <div class="scroll">
+        <h2>Assignment 3</h2>
+        <p>     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra, justo eget tincidunt hendrerit, 
+            risus libero volutpat sem, in faucibus turpis odio sit amet odio. Suspendisse potenti. Sed varius, purus id malesuada volutpat, 
+            metus nunc porttitor arcu, non bibendum lorem nunc nec ipsum. </p>
+        <p>     Nulla facilisi. Vestibulum tincidunt, metus nec volutpat pharetra, magna nunc fringilla nisl, ac vulputate neque enim a arcu. 
+            Vivamus tempus lacus sed dolor ultricies, sit amet porttitor elit vulputate. Aliquam erat volutpat. 
+            Maecenas pellentesque urna at purus tincidunt, non commodo dui vehicula.</p>
+        <p>     Cras sagittis convallis purus, nec luctus arcu gravida non. Sed id nunc sit amet metus tristique feugiat. 
+            Integer at orci consectetur, bibendum ipsum non, vehicula nulla. Praesent commodo, lacus a sollicitudin dictum, lacus justo dapibus justo, 
+            vel consectetur ipsum purus a nulla.</p>
+        <p>Sed tempus turpis at mi semper ornare. Proin ut ultricies tortor. Aliquam aliquam auctor ultrices. Nam euismod hendrerit augue in luctus. Cras sed neque sed ex ultricies fermentum et in lorem. Nulla tellus arcu, semper id mi aliquet, euismod scelerisque libero. Proin pellentesque ullamcorper purus, sit amet euismod mi blandit in. Vivamus in lorem 
+            sit amet dolor consequat semper. Nunc congue velit faucibus elit convallis faucibus.</p>
+    </div>
+    <div class="box">
+    <div class="download">
+        <a href="drag&drop2.html">
+        Upload Assignment
+        </a>
+    </div>
+    <div class="download">
+        <a href="#DA">
+        Download Assignment
+        </a>
+    </div>
+    </div>
+    
+    <h4>Your file was successfully submitted</h4>
+   
+</body>
+</html>
