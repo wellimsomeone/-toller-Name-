@@ -56,6 +56,21 @@
         height: 2;
         font-size: larger;
     }
+
+    .button-container{
+        display: flex;
+        justify-content: right;
+        background-color: rgb(255, 150, 167);
+        te
+    }
+
+    .button {
+        margin-top: 2%;
+        font-size: 2em;
+        width: 200px;
+        height: 40px;
+    }
+
     .button:hover{
         background-color: rgb(255, 113, 137);
     }
@@ -76,7 +91,9 @@
         <input type="text" id="username" style="height: 30px;" placeholder=" Enter your Username" required>
         <p style="font-size: 2vw;">WebSSO Password:</p>
         <input type="password" id="password" style="height: 30px;" placeholder=" Enter your Password" required>
-        <input type="button" class="button" value="Login" onclick="check_login()" style="margin-left: 82.3%; font-size: 2em; margin-top: 2%; width: 200px;"> 
+        <div class="button-container">
+            <input type="button" class="button" value="Login" onclick="check_login()"> 
+        </div>
         <h3 id="error-message" class="error-message"></h3>
     </div>
     <script>
