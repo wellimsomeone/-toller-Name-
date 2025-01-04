@@ -124,10 +124,6 @@
         padding: 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     }
-    .upload-field:hover, .upload-field:hover a{
-        background-color: rgb(255, 113, 137); 
-        color: black;
-    }
     a{
         background-color: rgb(255, 150, 167) ;
         text-decoration: none;
@@ -205,23 +201,9 @@ function drop(ev) {
         </div>
     </div>
     
-    <div id = "input" class="upload-field" ondragenter="changeColor(event)" ondragleave="changeColor(event)" ondrop="drop(event)"  ondragover="allowDrop(event)">
-        Drag & Drop
-    </div>
-    <h4 id = "msg">Keine Datei abgegeben.</h4>
-    <div>
-        <div class="button-wrap">
-            <input type="file" id="file-input" onchange="showFile()">
-            <label for="file-input" class = "download">Verzeichnis öffnen</label>
-        </div>
+    <div class = "upload-field"><h1>
+        Feedback erfolgreich abgegeben!</h1><br>
         
     </div>
-    <h4>Points: <input type="number" min = "0" max = "10"> /10</h4>
-    
-    <a href="page5b.html">
-        <div class="download">
-        Speichern
-    </div>
-        </a>
 </body>
 </html>
