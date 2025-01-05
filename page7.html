@@ -97,28 +97,6 @@
         border: 1px solid rgb(255, 113, 137); 
     }
 
-    .fun{
-        padding: 1%;
-        text-align: center;
-        background-color: rgb(255, 255, 9);
-        border: 1px black;
-        border-radius: 10px; 
-        box-shadow: 0 0 30px rgba(255, 128, 1, 0.8), 0 0 50px rgb(238, 255, 0);
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .fun p{
-       background-color: rgb(255, 255, 9);
-    }
-    .fun:hover, .fun:hover p, .fun:hover a{
-        background-color: rgb(255, 255, 136);
-    }
-    .fun a{
-        color: black;
-        text-decoration: none;
-        background-color: rgb(255, 255, 9);
-    }
     .group{
         margin-left: 7%;
         display: flex;
@@ -151,6 +129,56 @@
         margin-left: 7%;
         margin-bottom: 5%;
     }
+
+    .fun{
+        padding: 1%;
+        text-align: center;
+        background-color: rgb(255, 255, 9); #ffff09;
+        border: 1px black;
+        border-radius: 10px; 
+        box-shadow: 0 0 30px rgba(255, 128, 1, 0.8), 0 0 50px rgb(238, 255, 0);
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .fun p{
+       background-color: rgb(255, 255, 9);
+    }
+    .fun:hover, .fun:hover p, .fun:hover a{
+        background-color: rgb(255, 255, 136);
+    }
+    .fun a{
+        color: black;
+        text-decoration: none;
+        background-color: rgb(255, 255, 9);
+    }
+
+    #resultMessage {
+        background-color: transparent;
+        margin: auto;
+    }
+    
+    #scratch {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: grabbing;
+        position: absolute;
+        background-color: transparent;
+    }
+
+    .scratch-container {
+        width: 200px;
+        height: 66px;
+        background-color: rgb(255, 150, 167);
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 </style>
 </head>
 <body>
@@ -181,8 +209,13 @@
         <div class="row"><p class="course-item"><a href="page8.html">Assignment 3</a></p>   -/10 </div>
         <div class="row"><p class="course-item"><a href="#A4">Assignment 4</a></p> 10/10 </div>
         <div class="row"><p class="course-item"><a href="#A5">Assignment 5</a></p> 10/10 </div>
-        <div class="row"><p class="course-item"><a href="page9.html">Assignment 6</a></p>
-            <div class="fun"><p><a href="points.html">scratch off to get</a></p><p>points</p></div>
+        <div class="row">
+            <p class="course-item"><a href="page9.html">Assignment 6</a></p>
+            <div class="scratch-container">
+                
+                <canvas id="scratch" width="200" height="66"></canvas>
+                <div id="resultMessage" >You got 10/10 points!</div>
+            </div>
         </div>
     </div>
 </div>
@@ -192,4 +225,5 @@
 <p></p>
 <p></p>
 </body>
+<script src="./scratch.js"></script>
 </html>
