@@ -148,7 +148,7 @@ function dropFiles(ev) {
   var n = files.length;
   var totalString = "";
   for (var i = 0; i < n; i++) {
-    totalString += files[i].name + " abgegeben! <br/>";
+    totalString += files[i].name + " submitted! <br/>";
   }
   showMessage(totalString);
 }
@@ -170,7 +170,7 @@ function allowDrop(ev) {
 }
 
 function showFile(){
-  totalString = "Datei hochgeladen"
+  totalString = "File submitted!"
   showMessage(totalString);
 }
 
@@ -208,11 +208,11 @@ function drop(ev) {
     <div id = "input" class="upload-field" ondragenter="changeColor(event)" ondragleave="changeColor(event)" ondrop="drop(event)"  ondragover="allowDrop(event)">
         Drag & Drop
     </div>
-    <h4 id = "msg">Keine Datei abgegeben.</h4>
+    <h4 id = "msg">No file submitted.</h4>
     <div>
         <div class="button-wrap">
             <input type="file" id="file-input" onchange="showFile()">
-            <label for="file-input" class = "download">Verzeichnis öffnen</label>
+            <label for="file-input" class = "download">Open Directory</label>
         </div>
         
     </div>
@@ -220,7 +220,7 @@ function drop(ev) {
     
     <a href="page5bstudent.html">
         <div class="download">
-        Speichern
+        Save
     </div>
         </a>
 </body>
