@@ -113,9 +113,7 @@
         padding: 2%;
         background-color: rgb(255, 150, 167);
         width: 70%;
-        height: 25%;
-        display: flex;
-        align-items: center;
+        height: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -135,6 +133,15 @@
     }
     #file-input{
         display: none;
+    }
+    .buttons {
+        display: flex;
+        margin-left: 10%;
+        margin-top: 3%;
+        gap: 39%;
+    }
+    .buttons a{
+        background-color: pink ;
     }
 
 </style>
@@ -209,19 +216,17 @@ function drop(ev) {
         Drag & Drop
     </div>
     <h4 id = "msg">No file submitted.</h4>
-    <div>
+    <div class ="buttons">
         <div class="button-wrap">
             <input type="file" id="file-input" onchange="showFile()">
             <label for="file-input" class = "download">Open Directory</label>
         </div>
-        
-    </div>
-    
-    
-    <a href="page5bstudent.html">
-        <div class="download">
-        Save
-    </div>
+
+        <a href="page5bstudent.html">
+            <div class="download">
+            Save
+            </div>
         </a>
+    </div>
 </body>
 </html>
