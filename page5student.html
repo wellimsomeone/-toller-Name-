@@ -46,7 +46,7 @@
     .main {
         display: grid;
         float: right;
-        height: 120%;
+        height: 91%;
         min-width: 13%;
     }
     .aside{
@@ -80,9 +80,8 @@
         border: 1px solid rgb(255, 113, 137); 
     }
     h4{
-        padding-top: 3%;
+        padding-top: 4%;
         padding-left: 6%;
-        padding-bottom: 1%;
     }
     .current-item, .current-item a{
         background-color: rgb(255, 150, 167);
@@ -92,7 +91,7 @@
     }
     .download{
         margin-left: 5%;
-        margin-top: 1%;
+        margin-top: 3%;
         padding: 2%;
         background-color: rgb(255, 150, 167);
         width: 160px;
@@ -104,21 +103,28 @@
         padding: 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     }
-    .feedback{
-        margin-left: 4.5%;
-        margin-top: 1%;
+    .download:hover, .download:hover a{
+        background-color: rgb(255, 113, 137); 
+        color: black;
+    }
+    .upload-field{
+        margin-left: 5%;
+        margin-top: 3%;
         padding: 2%;
         background-color: rgb(255, 150, 167);
-        width: 160px;
-        height: 30px;
+        width: 70%;
+        height: 25%;
         display: flex;
+        align-items: center;
+        display: flex;
+        justify-content: center;
         align-items: center;
         border: 1px solid rgb(255, 113, 137); 
         border-radius: 10px; 
         padding: 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     }
-    .download:hover, .download:hover a, .feedback:hover, .feedback:hover a {
+    .upload-field:hover, .upload-field:hover a{
         background-color: rgb(255, 113, 137); 
         color: black;
     }
@@ -127,44 +133,58 @@
         text-decoration: none;
         color: black;
     }
-    .box{
-        display: flex;
-        align-content: space-between;
+    #file-input{
+        display: none;
     }
-    .scroll{
-        width: 600px; 
-        height: 300px; 
-        border: 1px solid rgb(255, 113, 137); 
-        padding: 10px; 
-        overflow-y: scroll;
-        overflow-x: hidden; 
-        background-color: rgb(255, 150, 167); 
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-        margin: 3%;
-    }
-    .scroll::-webkit-scrollbar {
-        width: 8px; 
-    }
-    .scroll::-webkit-scrollbar-thumb {
-        background-color: rgb(255, 113, 137); 
-        border-radius: 4px; 
-    }
-    .scroll::-webkit-scrollbar-track {
-        background-color: rgb(255, 75, 105); 
-    }
-    .scroll h2{
-        background-color: rgb(255, 150, 167); 
-    }
-
 
 </style>
+<script>
+function showMessage(m) {
+  var msg = document.getElementById("msg");
+  msg.innerHTML = m;
+}
+function dropFiles(ev) {
+  var files = ev.dataTransfer.files;
+  var n = files.length;
+  var totalString = "";
+  for (var i = 0; i < n; i++) {
+    totalString += files[i].name + " abgegeben! <br/>";
+  }
+  showMessage(totalString);
+}
+
+let element;
+
+function changeColor(ev){
+  if(ev.type == "dragenter" && ev.target.id.includes("input")){
+    ev.target.style.background =  "rgb(255, 113, 137)";
+  }
+  else if(ev.type == "dragleave"){
+    ev.target.style.background = "rgb(255, 150, 167)";
+  }
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+  return (ev.target.id+"").includes("dst")
+}
+
+function showFile(){
+  totalString = "Datei hochgeladen"
+  showMessage(totalString);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  dropFiles(ev);
+}
+</script>
 </head>
 <body>
     <div class="header">
-        <h1>Course A: Assignment 6</h1> 
+        <h1>Assignment 6</h1> 
         <div class="userinfo">
-            <p>Jan Mustermann</p>
+            <p>Max Mustermann</p>
             <p class="logout">
                 <img src="logout.png" alt="log out icon" class="logout-icon">
                 <a href="login.html"> Log out</a>
@@ -177,45 +197,31 @@
             <ul class="courses">
                 <p class="course-item"><a href="#SA">Assignment 1</a></p>
                 <p class="course-item"><a href="#SB">Assignment 2</a></p>
-                <p class="course-item"><a href="page8.html">Assignment 3</a></p>
+                <h3 class="current-item"><a href="page8.html">Assignment 3</a></h3>
                 <p class="course-item"><a href="#A3">Assignment 4</a></p>
                 <p class="course-item"><a href="#A4">Assignment 5</a></p>
-                <h3 class="current-item"><a href="page9.html">Assignment 6</a></h3>
+                <p class="course-item"><a href="page9.html">Assignment 6</a></p>
             </ul>
         </div>
     </div>
-    <div class="scroll">
-        <h2>Assignment 6</h2>
-        <p>     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra, justo eget tincidunt hendrerit, 
-            risus libero volutpat sem, in faucibus turpis odio sit amet odio. Suspendisse potenti. Sed varius, purus id malesuada volutpat, 
-            metus nunc porttitor arcu, non bibendum lorem nunc nec ipsum. </p>
-        <p>     Nulla facilisi. Vestibulum tincidunt, metus nec volutpat pharetra, magna nunc fringilla nisl, ac vulputate neque enim a arcu. 
-            Vivamus tempus lacus sed dolor ultricies, sit amet porttitor elit vulputate. Aliquam erat volutpat. 
-            Maecenas pellentesque urna at purus tincidunt, non commodo dui vehicula.</p>
-        <p>     Cras sagittis convallis purus, nec luctus arcu gravida non. Sed id nunc sit amet metus tristique feugiat. 
-            Integer at orci consectetur, bibendum ipsum non, vehicula nulla. Praesent commodo, lacus a sollicitudin dictum, lacus justo dapibus justo, 
-            vel consectetur ipsum purus a nulla.</p>
-        <p>Sed tempus turpis at mi semper ornare. Proin ut ultricies tortor. Aliquam aliquam auctor ultrices. Nam euismod hendrerit augue in luctus. Cras sed neque sed ex ultricies fermentum et in lorem. Nulla tellus arcu, semper id mi aliquet, euismod scelerisque libero. Proin pellentesque ullamcorper purus, sit amet euismod mi blandit in. Vivamus in lorem 
-            sit amet dolor consequat semper. Nunc congue velit faucibus elit convallis faucibus.</p>
+    
+    <div id = "input" class="upload-field" ondragenter="changeColor(event)" ondragleave="changeColor(event)" ondrop="drop(event)"  ondragover="allowDrop(event)">
+        Drag & Drop
     </div>
-    <div class="box">
-    <div class="download">
-        <a href="./page5student.html">
-        Upload Assignment
-        </a>
-    </div>
-    <div class="download">
-        <a href="#DA">
-        Download Assignment
-        </a>
-    </div>
+    <h4 id = "msg">Keine Datei abgegeben.</h4>
+    <div>
+        <div class="button-wrap">
+            <input type="file" id="file-input" onchange="showFile()">
+            <label for="file-input" class = "download">Verzeichnis öffnen</label>
+        </div>
+        
     </div>
     
-    <h4>Points: 10/10</h4>
-    <div class="feedback">
-        <a href="UF">
-        Download Feedback
-        </a>
+    
+    <a href="page5bstudent.html">
+        <div class="download">
+        Speichern
     </div>
+        </a>
 </body>
 </html>
