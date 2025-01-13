@@ -29,6 +29,9 @@
         color: black;
         
     }
+    .logout a:hover {
+        color: blue;
+    }
     p, h1{
         background-color: rgb(255, 150, 167);
     }
@@ -69,8 +72,14 @@
         cursor: pointer;
         background-color: rgb(255, 150, 167);
     }
-    .course-item a:hover {
+    .course-item a:hover, .current-item a:hover {
         color: blue;
+    }
+    .current-item, .current-item a{
+        background-color: rgb(255, 150, 167);
+        text-decoration: none;
+        color: black;
+        
     }
     .container{
       margin-left: 7%;
@@ -106,6 +115,7 @@
         <div class="aside">
             <p>Other courses:</p>
             <ul class="courses">
+                <h3 class="current-item"><a href="page7.html">Course A</a></h3>
                 <p class="course-item"><a href="#courseB">Course B</a></p>
                 <p class="course-item"><a href="#courseC">Course C</a></p>
                 <p class="course-item"><a href="#courseD">Course D</a></p>
