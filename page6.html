@@ -62,8 +62,11 @@
         
     }
     a{
-        background-color: rgb(255, 150, 167);  
         text-decoration: none;
+        display: block;
+    }
+    .logout a {
+        background-color: inherit;
     }
     .course{
         background-color: rgb(255, 150, 167);
@@ -140,17 +143,20 @@
     </div>
 
     <div class="course-container">
+        <a href="page7.html">
         <div class="course">
-            <a href="page7.html">
+            
             <p class="assignments-to-check">Course A</p>
             Total points: 60/70
-            </a>
+    
             <div class="tooltip">
-                <a href="page7.html"><img src="attention.png" alt="attention picture" class="attention-icon">
-                <span class="tooltip-text">New Feedback!</span>
-                </a>
+                <img src="attention.png" alt="attention picture" class="attention-icon">
+                <span class="tooltip-text">New Feedback!</span> 
             </div>
         </div>
+        </a>
+
+
         <div class="course">
             <p class="assignments-to-check">Course B</p>
             Total points: 14/15

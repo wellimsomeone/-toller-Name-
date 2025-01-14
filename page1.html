@@ -60,8 +60,11 @@
         color: blue;
     }
     a{
-        background-color: rgb(255, 150, 167);  
+        display: block; 
         text-decoration: none;
+    }
+    .logout a {
+        background-color: inherit;
     }
     .course{
         background-color: rgb(255, 150, 167);
@@ -138,22 +141,18 @@
     </div>
 
     <div class="course-container">
+        <a href="page2.html">
         <div class="course">
-            <a href="page2.html">
+            
             <p class="assignments-to-check">Course A</p>
             Not corrected Assignments: 2
             
-        </a> 
-        <div class="tooltip">
-            <a href="page3.html">
-            <img src="attention.png" alt="attention picture" class="attention-icon">
-            <span class="tooltip-text">There are new Assignments</span>
-            </a>
+            <div class="tooltip">
+                <img src="attention.png" alt="attention picture" class="attention-icon">
+                <span class="tooltip-text">There are new Assignments</span>
+            </div>  
         </div>
-       
-       
-            
-        </div>
+        </a>
         <div class="course">
             <p class="assignments-to-check">Course B</p>
             Not corrected Assignments: 3
