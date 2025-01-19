@@ -64,7 +64,7 @@
         cursor: pointer;
         background-color: rgb(255, 150, 167);
     }
-    .course-item a:hover, .current-item a:hover{
+    .course-item a:hover, .current-item a:hover, .home a:hover{
         color: blue;
     }
     .container{
@@ -122,7 +122,7 @@
     <div class="header">
         <h1>Student E: Assignment 6</h1> 
         <div class="userinfo">
-            <p>Max Mustermann</p>
+            <p class="home"><a href="page1.html">Max Mustermann</a></p>
             <p class="logout">
                 <img src="logout.png" alt="log out icon" class="logout-icon">
                 <a href="login.html"> Log out</a>
@@ -131,7 +131,7 @@
     </div>
     <div class="main">
         <div class="aside">
-            <p>Other assignments:</p>
+            <p class="course-item"><a href="page2.html">Other assignments:</a></p>
             <ul class="courses">
                 <p class="course-item"><a href="#SA">Student A (10/10)</a></p>
                 <p class="course-item"><a href="#SB">Student B (8/10)</a></p>

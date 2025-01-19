@@ -56,7 +56,7 @@
         color: black;
         
     }
-    .logout a:hover {
+    .logout a:hover, .home a:hover {
         color: blue;
     }
     a{
@@ -88,12 +88,12 @@
         background-color: rgb(255, 150, 167);
         height: 60px;
         width: 60px;
+        
     }
     .course p{
-        margin-bottom: 5%;
+        margin-bottom: 6%;
         text-align: left;
     }
-
     .tooltip {
         background-color: rgb(255, 150, 167);
         position: absolute; 
@@ -125,6 +125,12 @@
 .tooltip:hover .tooltip-text {
     visibility: visible;
 }
+.home {
+    cursor: pointer;
+}
+.home a{
+    background-color: inherit;
+}
    
 </style>
 </head>
@@ -132,7 +138,7 @@
     <div class="header">
         <h1>Courses:</h1> 
         <div class="userinfo">
-            <p>Max Mustermann</p>
+            <p class="home"><a href="page1.html">Max Mustermann</a></p>
             <p class="logout">
                 <img src="logout.png" alt="log out icon" class="logout-icon">
                 <a href="login.html"> Log out</a>
@@ -141,26 +147,31 @@
     </div>
 
     <div class="course-container">
-        <a href="page2.html">
+        <a href="page2.html" > 
         <div class="course">
             
             <p class="assignments-to-check">Course A</p>
             Not corrected Assignments: 2
-            
+       
             <div class="tooltip">
+    
                 <img src="attention.png" alt="attention picture" class="attention-icon">
                 <span class="tooltip-text">There are new Assignments</span>
+                
             </div>  
         </div>
-        </a>
+    </a>
+       
         <div class="course">
             <p class="assignments-to-check">Course B</p>
             Not corrected Assignments: 3
 
-            <div class="tooltip">
+        <div class="tooltip">
+           
             <img src="attention.png" alt="attention picture" class="attention-icon">
             <span class="tooltip-text">There are new Assignments</span>
-            </div>
+            
+        </div>
 
         </div>
         <div class="course">

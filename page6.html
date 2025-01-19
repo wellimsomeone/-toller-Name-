@@ -40,8 +40,7 @@
         width: 16px;
         background-color: rgb(255, 150, 167);
     }
-    .logout:hover {color: blue;
-        
+    .logout:hover, .home a:hover {color: blue;
     }
     .course-container{
         display: grid;
@@ -65,7 +64,7 @@
         text-decoration: none;
         display: block;
     }
-    .logout a {
+    .logout a, .home a {
         background-color: inherit;
     }
     .course{
@@ -133,7 +132,14 @@
     background-color: inherit;
     place-content: left;
     color: rgb(161, 0, 0);
-    font-size: 14pt;
+    font-size: 15pt;
+}
+.home{
+    background-color: rgb(255, 150, 167);
+    cursor: pointer;
+}
+.home p{
+    background-color: aqua;
 }
    
 </style>
@@ -142,7 +148,7 @@
     <div class="header">
         <h1>Courses:</h1> 
         <div class="userinfo">
-            <p>Jan Mustermann</p>
+            <p class="home"><a href="page6.html">Jan Mustermann</a></p>
             <p class="logout">
                 <img src="logout.png" alt="log out icon" class="logout-icon">
                 <a href="login.html"> Log out</a>

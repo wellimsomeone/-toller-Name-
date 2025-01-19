@@ -53,7 +53,7 @@
         width: 16px;
         background-color: rgb(255, 150, 167);
     }
-    .logout:hover {color: blue;}
+    .logout:hover, .home a:hover {color: blue;}
     .main {
         display: grid;
         float: right;
@@ -107,7 +107,7 @@
     <div class="header">
         <h1>Course A: Assignment 6</h1> 
         <div class="userinfo">
-            <p>Max Mustermann</p>
+            <p class="home"><a href="page1.html">Max Mustermann</a></p>
             <p class="logout">
                 <img src="logout.png" alt="log out icon" class="logout-icon">
                 <a href="login.html"> Log out</a>
@@ -116,7 +116,7 @@
     </div>
     <div class="main">
         <div class="aside">
-            <p>Other assignments:</p>
+            <p class="course-item"><a href="page2.html">Other assignments:</a></p>
             <ul class="courses">
                 <p class="course-item"><a href="#A1">Assignment 1</a></p>
                 <p class="course-item"><a href="#A2">Assignment 2</a></p>

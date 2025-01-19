@@ -45,7 +45,7 @@
     .logout a:hover {
         color: blue;
     }
-    .logout:hover {color: blue;}
+    .logout:hover, .home a:hover {color: blue;}
     .main {
         display: grid;
         float: right;
@@ -146,6 +146,9 @@
     .buttons a{
         background-color: pink ;
     }
+    .home {
+    cursor: pointer;
+}
 
 </style>
 <script>
@@ -194,7 +197,7 @@ function drop(ev) {
     <div class="header">
         <h1>Assignment 3</h1> 
         <div class="userinfo">
-            <p>Jan Mustermann</p>
+            <p class="home"><a href="page6.html">Jan Mustermann</a></p>
             <p class="logout">
                 <img src="logout.png" alt="log out icon" class="logout-icon">
                 <a href="login.html"> Log out</a>
