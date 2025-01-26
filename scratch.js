@@ -20,7 +20,7 @@ const init = () => {
     context.fillStyle = "black";
     context.font = "20px Arial";
     context.textAlign = "center";
-    wrapText(context, " ", canvas.width / 2, canvas.height / 2, canvas.width - 20, 25);
+    wrapText(context, "scratch me!", canvas.width / 2, canvas.height / 2, canvas.width - 20, 25);
 };
 
 // Function to wrap text
@@ -110,10 +110,27 @@ function handlePercentage(filledInPixels) {
     if (filledInPixels > 50) {
         canvas.style.transition = "opacity 1s ease-out";
         canvas.style.opacity = 0;
+        generateConfetti();
         setTimeout(() => {
             canvas.parentNode.removeChild(canvas);
         }, 1000);
     }
 }
 
+const confettiWrapper = document.querySelector('.confetti-wrapper');
+// Generate confetti
+function generateConfetti(){
+    for (let i = 0; i < 3; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti-piece');
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.setProperty('--fall-duration', `${Math.random() * 3 + 3}s`);
+        confetti.style.setProperty('--confetti-color', getRandomColor());
+        confettiWrapper.appendChild(confetti);
+      }
+}
+function getRandomColor() {
+  const colors = ['#ff6347', '#ffa500', '#32cd32', '#1e90ff', '#ff69b4'];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
 window.onload = init;
