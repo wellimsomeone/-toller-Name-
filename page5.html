@@ -136,6 +136,15 @@
         text-decoration: none;
         color: black;
     }
+    .buttons {
+        display: flex;
+        margin-left: 10%;
+        margin-top: 3%;
+        gap: 17%;
+    }
+    .buttons a{
+        background-color: pink ;
+    }
     #file-input{
         display: none;
     }
@@ -211,19 +220,27 @@ function drop(ev) {
     <div id = "input" class="upload-field" ondragenter="changeColor(event)" ondragleave="changeColor(event)" ondrop="drop(event)"  ondragover="allowDrop(event)">
         Drag & Drop
     </div>
-    <h4 id = "msg">No File submitted.</h4>
-    <div>
+    <h4 id = "msg">No File saved.</h4>
+
+    <h4>Points: <input type="number" min = "0" max = "10"> /10</h4>
+
+    <div class ="buttons">
+        <a href="page4.html">
+            <div class="download">
+            Cancel
+            </div>
+        </a>
         <div class="button-wrap">
             <input type="file" id="file-input" onchange="showFile()">
             <label for="file-input" class = "download">Open Directory</label>
         </div>
+
         
-    </div>
-    <h4>Points: <input type="number" min = "0" max = "10"> /10</h4>
-    
-    <a href="page5b.html">
-        <div class="download">
-        Save
+        <a href="page5b.html">
+            <div class="download">
+            Save
+            </div>
+        </a>
     </div>
         </a>
 </body>
