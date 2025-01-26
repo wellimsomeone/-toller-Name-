@@ -20,7 +20,7 @@ const init = () => {
     context.fillStyle = "black";
     context.font = "16px Arial";
     context.textAlign = "center";
-    wrapText(context, "scratch me!", canvas.width / 2, canvas.height / 2+4, canvas.width - 20, 25);
+    wrapText(context, "Scratch me!", canvas.width / 2, canvas.height / 2+4, canvas.width - 20, 25);
 };
 
 // Function to wrap text
