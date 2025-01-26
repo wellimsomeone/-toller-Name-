@@ -118,16 +118,25 @@ function handlePercentage(filledInPixels) {
 }
 
 const confettiWrapper = document.querySelector('.confetti-wrapper');
+const maxConfetti = 100
+let currentConfetti = 0
 // Generate confetti
 function generateConfetti(){
-    for (let i = 0; i < 3; i++) {
+    if(maxConfetti > currentConfetti){
+      for (let i = 0; i < 3; i++) {
         const confetti = document.createElement('div');
         confetti.classList.add('confetti-piece');
         confetti.style.left = `${Math.random() * 100}%`;
         confetti.style.setProperty('--fall-duration', `${Math.random() * 3 + 3}s`);
         confetti.style.setProperty('--confetti-color', getRandomColor());
         confettiWrapper.appendChild(confetti);
-      }
+      }  
+      currentConfetti++
+    }
+    setTimeout(() => {
+        confettiWrapper.remove()
+    }, 10000)
+    console.log(currentConfetti )
 }
 function getRandomColor() {
   const colors = ['#ff6347', '#ffa500', '#32cd32', '#1e90ff', '#ff69b4'];
